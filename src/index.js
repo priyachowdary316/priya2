@@ -6,6 +6,17 @@ import * as serviceWorker from "./serviceWorker";
 import reducer, { initialState } from "./reducer";
 import { StateProvider } from "./StateProvider";
 
+
+function loadCoupon(){
+  document.getElementById('coupon').style.visibility = 'visible';
+  document.getElementById('main').style.opacity='0.7'
+}
+
+function closeCoupon(){
+  document.getElementById('coupon').style.visibility = 'hidden';
+  document.getElementById('main').style.opacity='1'
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer={reducer}>
